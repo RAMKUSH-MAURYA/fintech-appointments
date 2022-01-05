@@ -30,7 +30,7 @@ class Config {
     // GENERAL SETTINGS
     // ------------------------------------------------------------------------
 
-    const BASE_URL      = 'https://fintech-appointments.herokuapp.com/';
+    const BASE_URL      = 'http://localhost:90/easyappointments-master';
     const LANGUAGE      = 'english';
     const DEBUG_MODE    = FALSE;
 
@@ -41,7 +41,7 @@ class Config {
     const DB_HOST       = 'localhost';
     const DB_NAME       = 'easyappointments';
     const DB_USERNAME   = 'root';
-    const DB_PASSWORD   = 'root';
+    const DB_PASSWORD   = '';
 
     // ------------------------------------------------------------------------
     // GOOGLE CALENDAR SYNC
