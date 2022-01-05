@@ -30,7 +30,7 @@ class Config {
     // GENERAL SETTINGS
     // ------------------------------------------------------------------------
 
-    const BASE_URL      = 'https://fintech-appointments.herokuapp.com/';
+    const BASE_URL      = 'https://fintech-appointments.herokuapp.com';
     const LANGUAGE      = 'english';
     const DEBUG_MODE    = FALSE;
 
@@ -38,10 +38,10 @@ class Config {
     // DATABASE SETTINGS
     // ------------------------------------------------------------------------
 
-    const DB_HOST       = 'localhost';
-    const DB_NAME       = 'easyappointments';
-    const DB_USERNAME   = 'root';
-    const DB_PASSWORD   = 'root';
+    const DB_HOST       = 'sh205.hostgator.in';
+    const DB_NAME       = 'zakitixm_appointments';
+    const DB_USERNAME   = 'zakitixm_appointment';
+    const DB_PASSWORD   = 'Frontagile@2022';
 
     // ------------------------------------------------------------------------
     // GOOGLE CALENDAR SYNC
