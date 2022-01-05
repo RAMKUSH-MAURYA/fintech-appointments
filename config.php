@@ -29,7 +29,6 @@ class Config {
     // ------------------------------------------------------------------------
     // GENERAL SETTINGS
     // ------------------------------------------------------------------------
-
     const BASE_URL      = 'https://fintech-appointments.herokuapp.com';
     const LANGUAGE      = 'english';
     const DEBUG_MODE    = FALSE;
