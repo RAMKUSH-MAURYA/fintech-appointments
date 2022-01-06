@@ -262,9 +262,11 @@ window.FrontendBookApi = window.FrontendBookApi || {};
             dataType: 'json'
         })
             .done(function (response) {
-                unavailableDatesBackup = response;
-                selectedDateStringBackup = selectedDateString;
-                applyUnavailableDates(response, selectedDateString, true);
+                // unavailableDatesBackup = response;
+                // selectedDateStringBackup = selectedDateString;
+                // applyUnavailableDates(response, selectedDateString, true);
+            }).catch(function(){
+                
             });
     };
 
