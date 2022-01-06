@@ -254,7 +254,7 @@ window.FrontendBookApi = window.FrontendBookApi || {};
             manage_mode: FrontendBook.manageMode,
             appointment_id: appointmentId
         };
-console.log('Working on same point...!!!');
+
         $.ajax({
             url: url,
             type: 'GET',
