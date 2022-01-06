@@ -365,7 +365,7 @@ class Services_model extends EA_Model {
                 'service_categories.id = services.id_service_categories', 'left')
             ->order_by('name ASC')
             ->get()->result_array();
-            echo "DB Call done result : ".json_encode($resss);
+            //echo "DB Call done result : ".json_encode($resss);
             return $resss;
     }
 
