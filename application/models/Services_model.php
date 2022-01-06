@@ -355,7 +355,7 @@ class Services_model extends EA_Model {
     public function get_available_services()
     {
         $this->db->distinct();
-        return $this->db
+        $resss= $this->db
             ->select('services.*, service_categories.name AS category_name, '
                 . 'service_categories.id AS category_id')
             ->from('services')
@@ -365,6 +365,8 @@ class Services_model extends EA_Model {
                 'service_categories.id = services.id_service_categories', 'left')
             ->order_by('name ASC')
             ->get()->result_array();
+            echo "DB Call done result : ".json_encode($resss);
+            return $resss;
     }
 
     /**
