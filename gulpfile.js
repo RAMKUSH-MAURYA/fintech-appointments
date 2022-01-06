@@ -87,8 +87,8 @@ gulp.task('package', (done) => {
 });
 
 gulp.task('clean', (done) => {
-    fs.removeSync('assets/js/**/*.min.js');
-    fs.removeSync('assets/css/**/*.min.css');
+    // fs.removeSync('assets/js/**/*.min.js');
+    // fs.removeSync('assets/css/**/*.min.css');
     done();
 });
 
