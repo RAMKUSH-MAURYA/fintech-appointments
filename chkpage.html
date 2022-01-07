@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        var flg = false;
+        function LoadData() {
+            console.log("Load data called..!!");
+            if (!flg) {
+                $.ajax({
+                    crossDomain: true,
+                    url: 'http://fintech-appointments.herokuapp.com/index.php/appointments/ajax_get_unavailable_dates?provider_id=2&service_id=1&selected_date=2022-01-06&csrfToken=0ff3f71de46f75444641daf328cac5e3&manage_mode=false&appointment_id=1',
+                    dataType: "json",
+                    type: "GET",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        flg = true;
+                        console.log(data);
+                    },
+                    error: function (response) {
+                        //alert(response.responseText);
+                    },
+                    failure: function (response) {
+                        //alert(response.responseText);
+                    }
+                });
+                setTimeout("LoadData()", 15000);
+            }
+        }
+        $(document).ready(function () {
+            LoadData();
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        
+
+</div>
+<div class="spa20"></div>
+</form>
+</body>
+</html>
