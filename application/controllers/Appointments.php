@@ -594,43 +594,43 @@ class Appointments extends EA_Controller {
             // Get the service record.
             $service = $this->services_model->get_row($service_id);
 
-            for ($i = 1; $i <= $number_of_days_in_month; $i++)
-            {
-                $current_date = new DateTime($selected_date->format('Y-m') . '-' . $i);
+            // for ($i = 1; $i <= $number_of_days_in_month; $i++)
+            // {
+            //     $current_date = new DateTime($selected_date->format('Y-m') . '-' . $i);
 
-                if ($current_date < new DateTime(date('Y-m-d 00:00:00')))
-                {
-                    // Past dates become immediately unavailable.
-                    $unavailable_dates[] = $current_date->format('Y-m-d');
-                    continue;
-                }
+            //     if ($current_date < new DateTime(date('Y-m-d 00:00:00')))
+            //     {
+            //         // Past dates become immediately unavailable.
+            //         $unavailable_dates[] = $current_date->format('Y-m-d');
+            //         continue;
+            //     }
 
-                // Finding at least one slot of availability.
-                foreach ($provider_ids as $current_provider_id)
-                {
-                    $provider = $this->providers_model->get_row($current_provider_id);
+            //     // Finding at least one slot of availability.
+            //     foreach ($provider_ids as $current_provider_id)
+            //     {
+            //         $provider = $this->providers_model->get_row($current_provider_id);
 
-                    $available_hours = $this->availability->get_available_hours(
-                        $current_date->format('Y-m-d'),
-                        $service,
-                        $provider,
-                        $exclude_appointment_id
-                    );
+            //         $available_hours = $this->availability->get_available_hours(
+            //             $current_date->format('Y-m-d'),
+            //             $service,
+            //             $provider,
+            //             $exclude_appointment_id
+            //         );
 
-                    if ( ! empty($available_hours))
-                    {
-                        break;
-                    }
-                }
+            //         if ( ! empty($available_hours))
+            //         {
+            //             break;
+            //         }
+            //     }
 
-                // No availability amongst all the provider.
-                if (empty($available_hours))
-                {
-                    $unavailable_dates[] = $current_date->format('Y-m-d');
-                }
-            }
+            //     // No availability amongst all the provider.
+            //     if (empty($available_hours))
+            //     {
+            //         $unavailable_dates[] = $current_date->format('Y-m-d');
+            //     }
+            // }
 
-            $response = $unavailable_dates;
+            $response = ["20 jan 2021","30 jun 2021","20 Jan 2022"];
         }
         catch (Exception $exception)
         {

@@ -29,8 +29,8 @@ class Config {
     // ------------------------------------------------------------------------
     // GENERAL SETTINGS
     // ------------------------------------------------------------------------
-   // const BASE_URL      = 'http://fintech-appointments.herokuapp.com';
     const BASE_URL      = 'http://fintech-appointments.herokuapp.com';
+    //const BASE_URL      = 'http://localhost:90/easyappointments-master';
     const LANGUAGE      = 'english';
     const DEBUG_MODE    = FALSE;
 
